@@ -5,7 +5,7 @@ import './Formulario.css'
 export const Formulario = () => {
   //JSX
   return(
-        <section>
+        <section className="formulario">
 
             <form>
                 <h2> Preencha os dados para criar os cards dos funcionários</h2>
