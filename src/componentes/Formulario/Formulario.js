@@ -2,6 +2,7 @@
 import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
+
 //aerofuntion para que as informações do Formulario vão para index.js
 export const Formulario = () => {
 //Aqui a connstante que dará os itens
@@ -26,7 +27,7 @@ export const Formulario = () => {
                 <CampoTexto label="Nome" placeholder="Digite seu nome"/>
                 <CampoTexto label="Cargo" placeholder="Digite seu cargo"/>
                 <CampoTexto label="Imagem" placeholder="Cole aqui o endereço da imagem"/>
-                <ListaSuspensa itens={times} />
+                <ListaSuspensa label="Time" itens={times} />
             </form>
 
         </section>

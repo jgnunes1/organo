@@ -9,7 +9,7 @@ export const ListaSuspensa = (props) => {
             <label>{props.label}</label>
             <select>
                     {props.itens.map(item => {
-                  return <option>{item}</option>
+                  return <option key={item}>{item}</option>
                     })}
             </select>
 
