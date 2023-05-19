@@ -3,9 +3,19 @@ import Botao from '../Botao'
 import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
+import { IColaborador } from '../../shared/intefaces/IColaborador'
+
+
+interface FormularioProps{
+
+  aoColaboradorCadastrado: (colaborador: IColaborador) =>void //void só recebe não retorna nada 
+  time:string
+
+
+}
 
 //aerofuntion para que as informações do Formulario vão para index.js
-export const Formulario = (props) => {
+export const Formulario = (props: FormularioProps) => {
 //Aqui a connstante que dará os itens
 
        
@@ -17,7 +27,7 @@ export const Formulario = (props) => {
 
  //Uma função para o onSubmit
 
- const aoSalvar = (evento) => {
+ const aoSalvar = (evento: React.FormEvent<HTMLFormElement>) => {
    evento.preventDefault()
    props.aoColaboradorCadastrado({
     nome,
@@ -31,7 +41,7 @@ export const Formulario = (props) => {
   return(
         <section className="formulario">
 
-            <form onSubmit={aoSalvar}>
+            <form onSubmit={evento => aoSalvar(evento)}>
                 <h2> Preencha os dados para criar os cards dos funcionários</h2>
                 <CampoTexto
                  obrigatorio={true} 
@@ -54,9 +64,9 @@ export const Formulario = (props) => {
                  aoAlterado={valor => setImagem(valor)}
                  />
                 <ListaSuspensa 
-                obrigatorio={true} 
+                obrigatorio = {true} 
                 label="Time" 
-                itens={props.times}
+                itens={props.time}
                 valor={time}
                 aoAlterado={valor => setTime(valor)}
                  />

@@ -1,7 +1,17 @@
 import './Colaborador.css'
 
+interface ColaboradorProps {
 
-export const Colaborador = ( {nome, imagem, cargo, corDeFundo }) => {
+    nome: string
+    imagem: string
+    cargo: string
+    corDeFundo: string
+    
+}
+  
+
+
+export const Colaborador = ( {nome, imagem, cargo, corDeFundo }: any) => {
 
      return (<div className = 'colaborador' >
         <div className='cabecalho' style={{backgroundColor: corDeFundo}}>
