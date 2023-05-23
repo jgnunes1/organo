@@ -9,7 +9,7 @@ import { IColaborador } from '../../shared/intefaces/IColaborador'
 interface FormularioProps{
 
   aoColaboradorCadastrado: (colaborador: IColaborador) =>void //void só recebe não retorna nada 
-  time:string
+  time:string[]
 
 
 }
