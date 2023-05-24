@@ -1,12 +1,14 @@
-import { IColaborador } from '../../shared/intefaces/IColaborador'
+import React from 'react'
+import { IColaborador } from '../../shared/interfaces/IColaborador'
 import Colaborador from '../Colaborador'
 import './Time.css'
 
+
 interface TimeProps {
-   corPrimaria: string
-   corSecundaria: string
-   nome:string
-   colaboradores: IColaborador []
+    corPrimaria: string
+    corSecundaria: string
+    nome: string
+    colaboradores: IColaborador[]
 }
 
 export const Time = (props: TimeProps) => {
@@ -17,13 +19,13 @@ export const Time = (props: TimeProps) => {
             <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
             <div className='colaboradores'>
                 {props.colaboradores.map(colaborador =>
-                     <Colaborador 
-                     corDeFundo={props.corPrimaria} 
-                     key={colaborador.nome} 
-                     nome={colaborador.nome} 
-                     cargo={colaborador.cargo} 
-                     imagem={colaborador.imagem} 
-                     />)}
+                    <Colaborador
+                        corDeFundo={props.corPrimaria}
+                        key={colaborador.nome}
+                        nome={colaborador.nome}
+                        cargo={colaborador.cargo}
+                        imagem={colaborador.imagem}
+                    />)}
             </div>
         </section>
             : <> </>

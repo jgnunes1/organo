@@ -1,19 +1,21 @@
+import React from 'react'
+
 import './CampoTexto.css'
 
 interface CampoTextoProps {
-    aoAlterado: (valor:string) => void
+    aoAlterado: (valor: string) => void
     placeholder: string
     label: string
-    valor:string
+    valor: string
     obrigatorio?: boolean
 }
 
-const CampoTexto = ({ aoAlterado, label, placeholder, valor, obrigatorio = false }: CampoTextoProps) => {
+const CampoTexto = ({ aoAlterado, label, obrigatorio, placeholder, valor }: CampoTextoProps) => {
 
     const placeholderModificada = `${placeholder}...`
 
-    const aoDigitado = (evento: React.ChangeEvent<HTMLInputElement> ) => {
-          aoAlterado(evento.target.value)
+    const aoDigitado = (evento: React.ChangeEvent<HTMLInputElement>) => {
+        aoAlterado(evento.target.value)
     }
 
     return (
@@ -21,14 +23,14 @@ const CampoTexto = ({ aoAlterado, label, placeholder, valor, obrigatorio = false
             <label>
                 {label}
             </label>
-            <input 
-            value={valor} 
-            onChange={aoDigitado} 
-            required={obrigatorio} 
-            placeholder={placeholderModificada} 
+            <input
+                value={valor}
+                onChange={aoDigitado}
+                required={obrigatorio}
+                placeholder={placeholderModificada}
             />
         </div>
     )
 }
 
-export default CampoTexto 
+export default CampoTexto
