@@ -18,7 +18,7 @@ interface FormularioProps{
 export const Formulario = (props: FormularioProps) => {
 //Aqui a connstante que dará os itens
 
-       
+      
         const [nome, setNome] = useState('')
         const [cargo, setCargo] = useState('')
         const [imagem, setImagem] = useState('')

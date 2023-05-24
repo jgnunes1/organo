@@ -3,7 +3,6 @@
 }
 
 .campo-texto label {
-<<<<<<< HEAD
     display: block;
     margin-bottom: 8px;
     font-size: 24px;
@@ -17,19 +16,4 @@
     font-size: 24px;
     padding: 24px;
     box-sizing: border-box;
-=======
-  display: block;
-  margin-bottom: 8px;
-  font-size: 24px;
-}
-
-.campo-texto input {
-  background-color: #FFF;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-  width: 100%;
-  border: none;
-  font-size: 24px;
-  padding: 24px;
-  box-sizing: border-box;
->>>>>>> afcdfe58d32e98611007dd2a6b80fe9688562882
 }

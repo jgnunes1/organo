@@ -26,6 +26,6 @@ export const Time = (props: TimeProps) => {
                      />)}
             </div>
         </section>
-            : ''
+            : <> </>
     )
 }
